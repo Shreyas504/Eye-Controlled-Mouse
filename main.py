@@ -3,7 +3,7 @@ import numpy as np
 import dlib
 from math import hypot
 
-shapepredictor = "C:/Users/shrey/Downloads/shape_predictor_68_face_landmarks.dat"
+shapepredictor = "shape_predictor_68_face_landmarks.dat"
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor(shapepredictor)
 
@@ -57,6 +57,7 @@ while(True):
         if blinking_ratio > 4:
             cv2.putText(frame, "BLINKING", (50,150), font, 7, (255,255,0))
 
+        #Gaze Detection
         
     cv2.imshow("Frame",frame)
     # Display the resulting frame 
